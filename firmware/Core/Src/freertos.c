@@ -72,8 +72,8 @@ const osMessageQueueAttr_t DataQueue_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void DataAcqTask(void *argument);
-void OutputTask(void *argument);
+extern void DataAcqTask(void *argument);
+extern void OutputTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -122,42 +122,6 @@ void MX_FREERTOS_Init(void) {
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
 
-}
-
-/* USER CODE BEGIN Header_DataAcqTask */
-/**
-  * @brief  Function implementing the Data thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_DataAcqTask */
-void DataAcqTask(void *argument)
-{
-  /* USER CODE BEGIN DataAcqTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END DataAcqTask */
-}
-
-/* USER CODE BEGIN Header_OutputTask */
-/**
-* @brief Function implementing the Output thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_OutputTask */
-void OutputTask(void *argument)
-{
-  /* USER CODE BEGIN OutputTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END OutputTask */
 }
 
 /* Private application code --------------------------------------------------*/
