@@ -9,8 +9,10 @@
 #define INC_OUTPUTTASK_H_
 
 #include "cmsis_os.h"
+#include "usart.h"
 
 extern osMessageQueueId_t DataQueueHandle;
+extern UART_HandleTypeDef huart2;
 
 void OutputTask(void *argument);
 
