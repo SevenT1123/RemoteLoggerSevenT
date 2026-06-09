@@ -23,6 +23,9 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+#include "DataAcqTask.h"
+#include "OutputTask.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -101,7 +104,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* creation of DataQueue */
-  DataQueueHandle = osMessageQueueNew (10, sizeof(int16_t), &DataQueue_attributes);
+  DataQueueHandle = osMessageQueueNew (10, sizeof(IMUData_t), &DataQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
