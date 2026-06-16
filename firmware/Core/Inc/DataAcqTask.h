@@ -17,12 +17,13 @@ extern I2C_HandleTypeDef hi2c1;
 // Accel in m/s^2
 // Gyro in dps
 typedef struct {
-	double accel_x;
-	double accel_y;
-	double accel_z;
-	double gyro_x;
-	double gyro_y;
-	double gyro_z;
+	uint32_t timestamp_ms;
+	float accel_x;
+	float accel_y;
+	float accel_z;
+	float gyro_x;
+	float gyro_y;
+	float gyro_z;
 } IMUData_t;
 
 void DataAcqTask(void *argument);

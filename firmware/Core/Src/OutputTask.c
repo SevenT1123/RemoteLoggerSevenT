@@ -10,7 +10,7 @@
 #include <string.h>
 
 #define OUTPUT_TASK_TICK_MS 50U
-#define CSV_HEADER "accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z\r\n"
+#define CSV_HEADER "event,timestamp_ms,accel_x_ms2,accel_y_ms2,accel_z_ms2,gyro_x_dps,gyro_y_dps,gyro_z_dps\r\n"
 
 static void uart_print(const char *str)
 {
@@ -19,14 +19,15 @@ static void uart_print(const char *str)
 
 void OutputTask(void *argument)
 {
-	imuData rxData;
+	IMUData_t rxData;
 	char buf[128];
 	uart_print(CSV_HEADER);
 
 	for(;;) {
-		if(osMessgeQueueGet(DataQueueHandle, &rxData, NULL, OUTPUT_TASK_TICK_MS) == osOk)
+		if(osMessageQueueGet(DataQueueHandle, &rxData, NULL, OUTPUT_TASK_TICK_MS) == osOK)
 		{
-			snprintf(buf, sizeof(buf), "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f\r\n", rxData.accel_x, rxData.accel_y, rxData.accel_z, rxData.gyro_x, rxData.gyro_y, rxData.gyro_z);
+			snprintf(buf, sizeof(buf), "imu_data,%lu,%.2f,%.2f,%.2f,%.2f,%.2f,%.2f\r\n",
+					rxData.timestamp_ms, rxData.accel_x, rxData.accel_y, rxData.accel_z, rxData.gyro_x, rxData.gyro_y, rxData.gyro_z);
 			uart_print(buf);
 		}
 	}
