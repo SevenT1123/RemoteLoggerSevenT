@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "sevent-telemetry"
+version = "0.1.0"
+description = "Foxglove WebSocket + MCAP bridge for SevenT STM32 IMU telemetry"
+requires-python = ">=3.10"
+dependencies = [
+    "foxglove-websocket>=1.0.0",
+    "mcap>=1.0.0",
+    "pyserial>=3.5",
+    "serial-asyncio>=0.6",
+]
+
+[project.scripts]
+sevent-telemetry = "sevent_telemetry.foxglove_server:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sevent_telemetry*"]
