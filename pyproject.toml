@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.backends.legacy:build"
 
 [project]
@@ -18,5 +18,4 @@ dependencies = [
 sevent-telemetry = "sevent_telemetry.foxglove_server:cli"
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["sevent_telemetry*"]
+where = ["software/src"]

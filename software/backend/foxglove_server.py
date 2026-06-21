@@ -15,8 +15,8 @@ This bridge:
 Usage
 -----
     cd RemoteLoggerSevenT
-    python -m software.foxglove_server COM11
-    python -m software.foxglove_server /dev/ttyUSB0 --baud 115200 --print-rows
+    Windows: python -m software.foxglove_server COM11
+    Linux: python -m software.foxglove_server /dev/ttyUSB0 --baud 115200 --print-rows
 """
 
 from __future__ import annotations
