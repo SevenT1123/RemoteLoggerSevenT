@@ -1,0 +1,117 @@
+{
+  "configById": {
+    "Plot!23jsfm6": {
+      "xAxisVal": "timestamp",
+      "paths": [
+        {
+          "value": "/imu.accel_x_ms2",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#0000ff",
+          "id": "bf40eda2-8eb2-4c47-bfc5-bb551ae0a744"
+        },
+        {
+          "value": "/imu.accel_y_ms2",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#00ff00",
+          "id": "838c3ee7-8b4f-4487-a372-23fcca907d66"
+        },
+        {
+          "value": "/imu.accel_z_ms2",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#ff0000",
+          "id": "a3bf8be1-c9d6-4b0d-9dd8-d978c9406ac7"
+        }
+      ],
+      "xAxisLabel": "Time (s)",
+      "yAxisLabel": "Acceleration (m/s^2)",
+      "foxglovePanelTitle": "SevenT-IMU-Plot"
+    },
+    "RosOut!2dhh2vz": {
+      "minLogLevel": 1,
+      "preload": true,
+      "searchTerms": [],
+      "nameFilter": {},
+      "fontSize": 12,
+      "showLevel": true,
+      "showDate": true,
+      "showTime": true,
+      "showTimezone": true,
+      "showName": true,
+      "showSourceLocation": false
+    },
+    "Image!3mnp456": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 60,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "synchronize": false,
+      "imageMode": {}
+    },
+    "RawMessages!os6rgs": {
+      "defaultExpanded": false,
+      "topicPath": "/hello",
+      "diffEnabled": false,
+      "expansion": "all"
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "drawerConfig": {
+    "tracks": []
+  },
+  "layout": {
+    "direction": "row",
+    "first": "Plot!23jsfm6",
+    "second": {
+      "direction": "row",
+      "first": "RosOut!2dhh2vz",
+      "second": {
+        "first": "Image!3mnp456",
+        "second": "RawMessages!os6rgs",
+        "direction": "column",
+        "splitPercentage": 29.777625726992817
+      }
+    }
+  }
+}

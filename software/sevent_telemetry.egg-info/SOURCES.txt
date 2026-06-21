@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+software/backend/__init__.py
+software/backend/csv_logger.py
+software/backend/foxglove_server.py
+software/backend/parser.py
+software/backend/schema.py
+software/sevent_telemetry.egg-info/PKG-INFO
+software/sevent_telemetry.egg-info/SOURCES.txt
+software/sevent_telemetry.egg-info/dependency_links.txt
+software/sevent_telemetry.egg-info/entry_points.txt
+software/sevent_telemetry.egg-info/requires.txt
+software/sevent_telemetry.egg-info/top_level.txt

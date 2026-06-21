@@ -1,0 +1,3 @@
+[console_scripts]
+sevent-foxglove = backend.foxglove_server:cli
+sevent-log = backend.csv_logger:cli
