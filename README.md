@@ -13,10 +13,9 @@ pip install -e .
 ```
 3. Run for Windows
 ```sh
+# Windows
 python -m backend.foxglove_server COM11
-```
-Run for Linux
-```sh
+# Linux
 python -m backend.foxglove_server /dev/ttyUSB0 --baud 115200 --print-rows
 ```
 4. Open Foxglove Studio and run "Open Connection"
